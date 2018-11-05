@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="PayPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CPA-n5-4jo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muf-iI-5fT">
+                                        <rect key="frame" x="40" y="0.0" width="295" height="212.5"/>
+                                        <inset key="imageEdgeInsets" minX="100" minY="60" maxX="100" maxY="60"/>
+                                        <state key="normal" title="User" image="User"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="JeR-ev-woE" kind="presentation" identifier="goToSettings" id="byg-iJ-Gf3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awC-hQ-YS3">
+                                        <rect key="frame" x="0.0" y="217.5" width="375" height="212"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="SEND"/>
+                                        <connections>
+                                            <segue destination="phD-7q-5I2" kind="show" identifier="goToSending" id="zfc-PV-Hbx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-Jy-pfx">
+                                        <rect key="frame" x="0.0" y="434.5" width="375" height="212.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="RECEIVE"/>
+                                        <connections>
+                                            <segue destination="twS-Kf-UTT" kind="show" identifier="goToReceive" id="H4I-y2-MpD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="awC-hQ-YS3" firstAttribute="leading" secondItem="CPA-n5-4jo" secondAttribute="leading" id="IMk-fu-mgm"/>
+                                    <constraint firstItem="nQw-Jy-pfx" firstAttribute="leading" secondItem="CPA-n5-4jo" secondAttribute="leading" id="XYk-qX-seR"/>
+                                    <constraint firstAttribute="trailing" secondItem="nQw-Jy-pfx" secondAttribute="trailing" id="dDf-fa-LIQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="awC-hQ-YS3" secondAttribute="trailing" id="y3s-C0-5bA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CPA-n5-4jo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4pp-pq-xPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CPA-n5-4jo" secondAttribute="bottom" id="6JG-rq-Z5S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPA-n5-4jo" secondAttribute="trailing" id="6cY-ft-jKC"/>
+                            <constraint firstItem="CPA-n5-4jo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DeD-ho-DKw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Sending Controller-->
+        <scene sceneID="7qT-ge-cU0">
+            <objects>
+                <viewController storyboardIdentifier="Sending" id="phD-7q-5I2" customClass="SendingController" customModule="PayPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yG-um-hrE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChirpPhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="U94-42-SSE">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pEU-eT-W0Q" firstAttribute="bottom" secondItem="U94-42-SSE" secondAttribute="bottom" constant="50" id="6Qs-qZ-BUt"/>
+                            <constraint firstItem="U94-42-SSE" firstAttribute="top" secondItem="pEU-eT-W0Q" secondAttribute="top" constant="50" id="NXE-kG-RMc"/>
+                            <constraint firstItem="pEU-eT-W0Q" firstAttribute="trailing" secondItem="U94-42-SSE" secondAttribute="trailing" constant="50" id="UFP-yd-UVM"/>
+                            <constraint firstItem="U94-42-SSE" firstAttribute="leading" secondItem="pEU-eT-W0Q" secondAttribute="leading" constant="50" id="yb4-jr-7Z3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pEU-eT-W0Q"/>
+                    </view>
+                    <connections>
+                        <segue destination="bh1-jc-VQP" kind="show" identifier="goToSend" id="4cR-Pa-ubo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zA-w7-Y3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="30"/>
+        </scene>
+        <!--Send Controller-->
+        <scene sceneID="yAZ-BQ-OUb">
+            <objects>
+                <viewController storyboardIdentifier="Send" id="bh1-jc-VQP" customClass="SendController" customModule="PayPal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Zx-az-9XI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dl7-7g-0Ab">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dl7-7g-0Ab" firstAttribute="top" secondItem="dvQ-Am-N4t" secondAttribute="top" id="BTg-xm-rLp"/>
+                            <constraint firstItem="dvQ-Am-N4t" firstAttribute="trailing" secondItem="Dl7-7g-0Ab" secondAttribute="trailing" id="ETv-Yr-BWd"/>
+                            <constraint firstItem="dvQ-Am-N4t" firstAttribute="bottom" secondItem="Dl7-7g-0Ab" secondAttribute="bottom" id="NnF-zj-SDI"/>
+                            <constraint firstItem="Dl7-7g-0Ab" firstAttribute="leading" secondItem="dvQ-Am-N4t" secondAttribute="leading" id="bne-kV-RGb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dvQ-Am-N4t"/>
+                    </view>
+                    <connections>
+                        <outlet property="webBrowser" destination="Dl7-7g-0Ab" id="Aqn-Qf-fdM"/>
+                        <segue destination="5Z9-2v-rlD" kind="show" identifier="goToSent" id="Lc5-vy-snA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="webToHome" id="LdS-gI-8T1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKu-9h-PjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093" y="31"/>
+        </scene>
+        <!--Sent Controller-->
+        <scene sceneID="mXw-qG-XYX">
+            <objects>
+                <viewController storyboardIdentifier="Sent" id="5Z9-2v-rlD" customClass="SentController" customModule="PayPal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xM4-Yf-vGl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChirpPhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tvq-5d-0cD">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tvq-5d-0cD" firstAttribute="top" secondItem="pNm-i3-Vx4" secondAttribute="top" constant="50" id="3qi-9e-rcO"/>
+                            <constraint firstItem="pNm-i3-Vx4" firstAttribute="trailing" secondItem="tvq-5d-0cD" secondAttribute="trailing" constant="50" id="BUT-08-JYm"/>
+                            <constraint firstItem="tvq-5d-0cD" firstAttribute="leading" secondItem="pNm-i3-Vx4" secondAttribute="leading" constant="50" id="xb7-MK-FXv"/>
+                            <constraint firstItem="pNm-i3-Vx4" firstAttribute="bottom" secondItem="tvq-5d-0cD" secondAttribute="bottom" constant="50" id="z7N-dp-OPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pNm-i3-Vx4"/>
+                    </view>
+                    <connections>
+                        <segue destination="7Hr-cj-B0u" kind="show" identifier="goToSentSuccess" id="uTY-Y0-7xB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUI-qV-4Hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="33"/>
+        </scene>
+        <!--Sent Success Controller-->
+        <scene sceneID="Bhv-Ni-Cld">
+            <objects>
+                <viewController storyboardIdentifier="SentSuccess" id="7Hr-cj-B0u" customClass="SentSuccessController" customModule="PayPal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzt-Yv-fDK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-UH-hHa">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="135" maxX="0.0" maxY="135"/>
+                                <state key="normal" title="Button" image="Tick"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="vWZ-qr-AjB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6IB-UH-hHa" firstAttribute="leading" secondItem="kXm-8c-U2B" secondAttribute="leading" constant="50" id="XAD-bd-CyC"/>
+                            <constraint firstItem="6IB-UH-hHa" firstAttribute="top" secondItem="kXm-8c-U2B" secondAttribute="top" constant="50" id="dj7-i6-iFc"/>
+                            <constraint firstItem="kXm-8c-U2B" firstAttribute="trailing" secondItem="6IB-UH-hHa" secondAttribute="trailing" constant="50" id="mI1-G5-IxC"/>
+                            <constraint firstItem="kXm-8c-U2B" firstAttribute="bottom" secondItem="6IB-UH-hHa" secondAttribute="bottom" constant="50" id="nMy-xi-kZ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXm-8c-U2B"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKp-Ho-izC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3480" y="33"/>
+        </scene>
+        <!--Request Controller-->
+        <scene sceneID="vlK-BQ-hvm">
+            <objects>
+                <viewController storyboardIdentifier="Request" id="twS-Kf-UTT" customClass="RequestController" customModule="PayPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CtK-eg-p0z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3Lu-PM-zfg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <textField opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="10" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="64" translatesAutoresizingMaskIntoConstraints="NO" id="jB1-oS-DRW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="448"/>
+                                        <gestureRecognizers/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="j5o-xg-GlT" appends="YES" id="r0f-YU-2iA"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jf-RV-adc">
+                                        <rect key="frame" x="0.0" y="448" width="375" height="105.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="REQUEST">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="requestPayment:" destination="twS-Kf-UTT" eventType="touchUpInside" id="nz2-Er-ued"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-6I-7NK">
+                                        <rect key="frame" x="0.0" y="553.5" width="375" height="93.5"/>
+                                        <state key="normal" title="BACK"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="requestToHome" id="o9l-wK-rbB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Lu-PM-zfg" firstAttribute="leading" secondItem="K51-ug-Kh3" secondAttribute="leading" id="6Ih-bi-s19"/>
+                            <constraint firstItem="3Lu-PM-zfg" firstAttribute="top" secondItem="K51-ug-Kh3" secondAttribute="top" id="BLF-fs-ayR"/>
+                            <constraint firstItem="K51-ug-Kh3" firstAttribute="trailing" secondItem="3Lu-PM-zfg" secondAttribute="trailing" id="FKr-ZY-DIf"/>
+                            <constraint firstItem="3Lu-PM-zfg" firstAttribute="bottom" secondItem="K51-ug-Kh3" secondAttribute="bottom" id="wtD-H9-VtD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K51-ug-Kh3"/>
+                    </view>
+                    <connections>
+                        <outlet property="requestAmount" destination="jB1-oS-DRW" id="zHC-ic-UrO"/>
+                        <outlet property="requestButton" destination="6jf-RV-adc" id="tbn-US-TEG"/>
+                        <segue destination="hfG-44-Lmt" kind="show" identifier="goToReceive" id="dk8-AE-eCG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bG-iv-iya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="j5o-xg-GlT">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="twS-Kf-UTT" id="6ig-sG-BDn"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="670" y="817"/>
+        </scene>
+        <!--Receive Controller-->
+        <scene sceneID="f6G-C1-1io">
+            <objects>
+                <viewController storyboardIdentifier="Receive" id="hfG-44-Lmt" customClass="ReceiveController" customModule="PayPal" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QhR-nB-hri">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChirpPhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="m2S-2D-Rb4">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9fg-Es-nWZ" firstAttribute="bottom" secondItem="m2S-2D-Rb4" secondAttribute="bottom" constant="50" id="BrC-GZ-gH9"/>
+                            <constraint firstItem="m2S-2D-Rb4" firstAttribute="leading" secondItem="9fg-Es-nWZ" secondAttribute="leading" constant="50" id="F2N-cJ-eFm"/>
+                            <constraint firstItem="9fg-Es-nWZ" firstAttribute="trailing" secondItem="m2S-2D-Rb4" secondAttribute="trailing" constant="50" id="KS4-xO-1jh"/>
+                            <constraint firstItem="m2S-2D-Rb4" firstAttribute="top" secondItem="9fg-Es-nWZ" secondAttribute="top" constant="50" id="noO-zF-BCA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9fg-Es-nWZ"/>
+                    </view>
+                    <connections>
+                        <segue destination="Odo-3o-jKd" kind="show" identifier="goToReceiveSuccess" id="MqP-yI-eZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z84-nX-ffI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413.5999999999999" y="815.44227886056979"/>
+        </scene>
+        <!--Receive Success Controller-->
+        <scene sceneID="cLi-YK-nai">
+            <objects>
+                <viewController storyboardIdentifier="ReceiveSuccess" id="Odo-3o-jKd" customClass="ReceiveSuccessController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9eA-bF-VXa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GU-WI-hYa">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="135" maxX="0.0" maxY="135"/>
+                                <state key="normal" title="Button" image="Tick"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="successToHome" id="G0f-fa-9qJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8GU-WI-hYa" firstAttribute="top" secondItem="aBb-4y-5A3" secondAttribute="top" constant="50" id="TLe-rd-ECy"/>
+                            <constraint firstItem="aBb-4y-5A3" firstAttribute="trailing" secondItem="8GU-WI-hYa" secondAttribute="trailing" constant="50" id="ZGz-32-ETr"/>
+                            <constraint firstItem="aBb-4y-5A3" firstAttribute="bottom" secondItem="8GU-WI-hYa" secondAttribute="bottom" constant="50" id="lf1-hH-5HJ"/>
+                            <constraint firstItem="8GU-WI-hYa" firstAttribute="leading" secondItem="aBb-4y-5A3" secondAttribute="leading" constant="50" id="z3K-gw-ypa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aBb-4y-5A3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXy-xO-G1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="816"/>
+        </scene>
+        <!--Settings Controller-->
+        <scene sceneID="263-ls-wXP">
+            <objects>
+                <viewController storyboardIdentifier="Settings" id="JeR-ev-woE" customClass="SettingsController" customModule="PayPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jk4-NR-uzH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-3P-Nh2">
+                                <rect key="frame" x="0.0" y="195" width="375" height="447"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PayPal Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T44-Sp-OuQ">
+                                        <rect key="frame" x="106" y="0.0" width="163" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GR0-3p-SWQ">
+                                        <rect key="frame" x="62.5" y="80" width="250" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="OiZ-dR-zD1"/>
+                                            <constraint firstAttribute="width" constant="250" id="c2D-Bg-bIc"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32d-mL-oRt">
+                                        <rect key="frame" x="165.5" y="125" width="44" height="277"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="save:" destination="JeR-ev-woE" eventType="touchUpInside" id="aiv-R0-SLC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJo-mv-O10">
+                                        <rect key="frame" x="167.5" y="402" width="40" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="29j-iW-wGX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="BACK"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backToHome" id="1l6-4U-Uq6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H7n-th-5lh" firstAttribute="bottom" secondItem="7OD-3P-Nh2" secondAttribute="bottom" constant="25" id="33c-7V-sza"/>
+                            <constraint firstItem="H7n-th-5lh" firstAttribute="trailing" secondItem="7OD-3P-Nh2" secondAttribute="trailing" id="afQ-IA-zQC"/>
+                            <constraint firstItem="7OD-3P-Nh2" firstAttribute="leading" secondItem="H7n-th-5lh" secondAttribute="leading" id="hQ2-r8-p1h"/>
+                            <constraint firstItem="7OD-3P-Nh2" firstAttribute="top" secondItem="H7n-th-5lh" secondAttribute="top" constant="175" id="jiL-uB-fcj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H7n-th-5lh"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="GR0-3p-SWQ" id="apl-oX-G5t"/>
+                        <outlet property="saveButton" destination="32d-mL-oRt" id="eZb-GZ-0Fi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fuk-Gd-S3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="-713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ChirpPhoneIcon" width="2481" height="2481"/>
+        <image name="Tick" width="512" height="512"/>
+        <image name="User" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="o9l-wK-rbB"/>
+    </inferredMetricsTieBreakers>
+</document>
