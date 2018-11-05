@@ -6,11 +6,6 @@
 //  Copyright © 2018 Chirp. All rights reserved.
 //
 
-let APP_KEY = "CHIRP_APP_KEY"
-let APP_SECRET = "CHIRP_APP_SECRET"
-let APP_CONFIG = "CHIRP_APP_CONFIG"
-
-
 protocol ChirpDelegate {
     func onReceived(data: Data?)
     func onSent(data: Data?)

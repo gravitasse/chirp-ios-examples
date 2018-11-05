@@ -17,6 +17,7 @@
 		771069A920DD4653001C7A5E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771069A820DD4653001C7A5E /* Payment.swift */; };
 		771069B620E0E459001C7A5E /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771069B520E0E459001C7A5E /* Execute.swift */; };
 		77567DEE2190726D00825839 /* ChirpConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77567DED2190726D00825839 /* ChirpConnect.framework */; };
+		77567DF0219074A000825839 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77567DEF219074A000825839 /* Credentials.swift */; };
 		778C341620E4F92E00429E42 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C341520E4F92E00429E42 /* SettingsController.swift */; };
 		778C341820E4FF2300429E42 /* ReceiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C341720E4FF2300429E42 /* ReceiveController.swift */; };
 		778C341B20E500C600429E42 /* ChirpConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C341A20E500C600429E42 /* ChirpConnect.swift */; };
@@ -49,6 +50,7 @@
 		771069A820DD4653001C7A5E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		771069B520E0E459001C7A5E /* Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
 		77567DED2190726D00825839 /* ChirpConnect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChirpConnect.framework; path = PayPal/ChirpConnect.framework; sourceTree = "<group>"; };
+		77567DEF219074A000825839 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		778C341520E4F92E00429E42 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		778C341720E4FF2300429E42 /* ReceiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveController.swift; sourceTree = "<group>"; };
 		778C341A20E500C600429E42 /* ChirpConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChirpConnect.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				7710698D20DD278A001C7A5E /* LaunchScreen.storyboard */,
 				7710699020DD278A001C7A5E /* Info.plist */,
 				778C342120E5023B00429E42 /* PayPal-Bridging-Header.h */,
+				77567DEF219074A000825839 /* Credentials.swift */,
 			);
 			path = PayPal;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				771069A320DD44CE001C7A5E /* PayPalAPIClient.swift in Sources */,
 				771069A720DD45D9001C7A5E /* Authenticate.swift in Sources */,
 				771069A920DD4653001C7A5E /* Payment.swift in Sources */,
+				77567DF0219074A000825839 /* Credentials.swift in Sources */,
 				778C341B20E500C600429E42 /* ChirpConnect.swift in Sources */,
 				779BD89C20E53BF300B22E4C /* SendController.swift in Sources */,
 				778C341820E4FF2300429E42 /* ReceiveController.swift in Sources */,

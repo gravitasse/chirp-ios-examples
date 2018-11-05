@@ -2,7 +2,23 @@
 
 A selection of example iOS apps using Chirp.
 
-## Chirp + PayPal
+## Setup
+
+For all of the example apps you will need to
+
+- Sign up at [developers.chirp.io](https://developers.chirp.io) and download the latest iOS SDK from downloads
+- Drag and drop ChirpConnect.framework into the Xcode project
+- Copy/Paste your Chirp application key, secret and config string into the Credentials file
+
+----
+
+### Chirp + PayPal
 
 Peer-to-peer payments with anyone nearby using PayPal REST API and Chirp.
+
 See the [blog](https://blog.chirp.io/chirp-paypal-6e8e02c1d67f)
+
+For this tutorial you will also need to
+
+- Log in at PayPal developers page, and create an app
+- Copy/Paste the clientId and clientSecret into AppDelegate.swift
