@@ -22,3 +22,13 @@ For this tutorial you will also need to
 
 - Log in at PayPal developers page, and create an app
 - Copy/Paste the clientId and clientSecret into AppDelegate.swift
+
+----
+
+### Chirp + TOTP
+
+Send time based one time only passwords using sound.
+
+See the [blog](https://blog.chirp.io/chirp-totp-generation-and-transmission-6044410526a7)
+
+----
