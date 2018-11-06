@@ -12,6 +12,12 @@ For all of the example apps you will need to
 
 ----
 
+### Chirp Messenger
+
+Chirp Messenger uses your device's speaker and microphone to send and receive messages via audio.
+
+----
+
 ### Chirp + PayPal
 
 Peer-to-peer payments with anyone nearby using PayPal REST API and Chirp.
