@@ -6,8 +6,8 @@ A selection of example iOS apps using Chirp.
 
 For all of the example apps you will need to
 
-- Sign up at [developers.chirp.io](https://developers.chirp.io) and download the latest iOS SDK from downloads
-- Drag and drop ChirpConnect.framework into the Xcode project
+- Sign up at [developers.chirp.io](https://developers.chirp.io)
+- Run `pod install` inside the demo folder and open the .xcworkspace
 - Copy/Paste your Chirp application key, secret and config string into the Credentials file
 
 ----

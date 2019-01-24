@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         if let sdk = appDelegate.sdk {
 
             sdk.sendingBlock = {
-                (data : Data?) -> () in
+                (data : Data?, channel: UInt?) -> () in
                 self.sendButton.isEnabled = false
                 self.sendButton.setTitle("SENDING", for: .normal)
                 self.sendButton.backgroundColor = chirpGrey
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITextViewDelegate {
             }
 
             sdk.sentBlock = {
-                (data : Data?) -> () in
+                (data : Data?, channel: UInt?) -> () in
                 self.sendButton.isEnabled = true
                 self.sendButton.setTitle("SEND", for: .normal)
                 self.sendButton.backgroundColor = chirpBlue
@@ -90,14 +90,12 @@ class ViewController: UIViewController, UITextViewDelegate {
             if let sdk = appDelegate.sdk {
                 let data = self.inputText.text.data(using: .utf8)
                 if let data = data {
-                    sdk.send(data)
+                    if let error = sdk.send(data) {
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }
-    }
-
-    @IBAction func send(_ sender: Any) {
-        self.sendInput()
     }
 
     /*
@@ -106,17 +104,20 @@ class ViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         self.inputText.text = ""
     }
+    
+    @IBAction func send(_ sender: Any) {
+        self.sendInput()
+    }
 
     /*
      * Check the length of the data does not exceed
      * the max payload length.
-     * Catch any return keys in the inputText view,
-     * then close the keyboard and send the data.
+     * Catch any return keys in the inputText view
+     * and close the keyboard.
      */
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             textView.resignFirstResponder()
-            self.sendInput()
             return false
         }
         let data = self.inputText.text.data(using: .utf8)

@@ -1,0 +1,16 @@
+PODS:
+  - ChirpSDK (3.4.3)
+
+DEPENDENCIES:
+  - ChirpSDK (= 3.4.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ChirpSDK
+
+SPEC CHECKSUMS:
+  ChirpSDK: 6f7ca641463e090ec3df8a0c7189b7ce412cb739
+
+PODFILE CHECKSUM: 1c4db84d5f53f8ca8e1e22c3d3123464ddf95a31
+
+COCOAPODS: 1.6.0.beta.2
