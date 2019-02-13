@@ -5,6 +5,7 @@
 //  Created by Joe Todd on 22/06/2018.
 //  Copyright © 2018 Chirp. All rights reserved.
 //
+import UIKit
 
 struct PayPalPayment: APIRequest {
     private var accessToken: String

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B85B87B22915FF313EF5C9E /* Pods_PayPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE6E1738F5114FDA267A875 /* Pods_PayPal.framework */; };
 		7710698520DD2789001C7A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710698420DD2789001C7A5E /* AppDelegate.swift */; };
 		7710698720DD2789001C7A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710698620DD2789001C7A5E /* ViewController.swift */; };
 		7710698A20DD2789001C7A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7710698820DD2789001C7A5E /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		771069A720DD45D9001C7A5E /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771069A620DD45D9001C7A5E /* Authenticate.swift */; };
 		771069A920DD4653001C7A5E /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771069A820DD4653001C7A5E /* Payment.swift */; };
 		771069B620E0E459001C7A5E /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771069B520E0E459001C7A5E /* Execute.swift */; };
-		77567DEE2190726D00825839 /* ChirpConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77567DED2190726D00825839 /* ChirpConnect.framework */; };
 		77567DF0219074A000825839 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77567DEF219074A000825839 /* Credentials.swift */; };
 		778C341620E4F92E00429E42 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C341520E4F92E00429E42 /* SettingsController.swift */; };
 		778C341820E4FF2300429E42 /* ReceiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C341720E4FF2300429E42 /* ReceiveController.swift */; };
@@ -38,6 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08F2DEC5A069A7109677AB1C /* Pods-PayPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayPal.release.xcconfig"; path = "Target Support Files/Pods-PayPal/Pods-PayPal.release.xcconfig"; sourceTree = "<group>"; };
+		1C1CF47B2DAC869F33A74416 /* Pods-PayPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayPal.debug.xcconfig"; path = "Target Support Files/Pods-PayPal/Pods-PayPal.debug.xcconfig"; sourceTree = "<group>"; };
 		7710698120DD2789001C7A5E /* PayPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7710698420DD2789001C7A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7710698620DD2789001C7A5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,13 +51,12 @@
 		771069A620DD45D9001C7A5E /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
 		771069A820DD4653001C7A5E /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		771069B520E0E459001C7A5E /* Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
-		77567DED2190726D00825839 /* ChirpConnect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChirpConnect.framework; path = PayPal/ChirpConnect.framework; sourceTree = "<group>"; };
 		77567DEF219074A000825839 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		778C341520E4F92E00429E42 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		778C341720E4FF2300429E42 /* ReceiveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveController.swift; sourceTree = "<group>"; };
 		778C341A20E500C600429E42 /* ChirpConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChirpConnect.swift; sourceTree = "<group>"; };
-		778C342120E5023B00429E42 /* PayPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PayPal-Bridging-Header.h"; sourceTree = "<group>"; };
 		779BD89B20E53BF300B22E4C /* SendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendController.swift; sourceTree = "<group>"; };
+		BBE6E1738F5114FDA267A875 /* Pods_PayPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,19 +64,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77567DEE2190726D00825839 /* ChirpConnect.framework in Frameworks */,
+				1B85B87B22915FF313EF5C9E /* Pods_PayPal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B42E6EEA2E4D8CB28A077F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBE6E1738F5114FDA267A875 /* Pods_PayPal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2792EF8D221F5172DC125E50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C1CF47B2DAC869F33A74416 /* Pods-PayPal.debug.xcconfig */,
+				08F2DEC5A069A7109677AB1C /* Pods-PayPal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7710697820DD2789001C7A5E = {
 			isa = PBXGroup;
 			children = (
-				77567DED2190726D00825839 /* ChirpConnect.framework */,
 				7710698320DD2789001C7A5E /* PayPal */,
 				7710698220DD2789001C7A5E /* Products */,
+				2792EF8D221F5172DC125E50 /* Pods */,
+				0B42E6EEA2E4D8CB28A077F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +117,6 @@
 				7710698B20DD278A001C7A5E /* Assets.xcassets */,
 				7710698D20DD278A001C7A5E /* LaunchScreen.storyboard */,
 				7710699020DD278A001C7A5E /* Info.plist */,
-				778C342120E5023B00429E42 /* PayPal-Bridging-Header.h */,
 				77567DEF219074A000825839 /* Credentials.swift */,
 			);
 			path = PayPal;
@@ -141,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7710699320DD278A001C7A5E /* Build configuration list for PBXNativeTarget "PayPal" */;
 			buildPhases = (
+				2472A3D1ABBB83E9E25DB257 /* [CP] Check Pods Manifest.lock */,
 				7710697D20DD2789001C7A5E /* Sources */,
 				7710697E20DD2789001C7A5E /* Frameworks */,
 				7710697F20DD2789001C7A5E /* Resources */,
@@ -201,6 +220,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2472A3D1ABBB83E9E25DB257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PayPal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7710697D20DD2789001C7A5E /* Sources */ = {
@@ -359,6 +403,7 @@
 		};
 		7710699420DD278A001C7A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1CF47B2DAC869F33A74416 /* Pods-PayPal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -378,7 +423,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chirp.PayPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PayPal/PayPal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -387,6 +432,7 @@
 		};
 		7710699520DD278A001C7A5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F2DEC5A069A7109677AB1C /* Pods-PayPal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -406,7 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Chirp.PayPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PayPal/PayPal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

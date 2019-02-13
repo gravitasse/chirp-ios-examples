@@ -6,6 +6,8 @@
 //  Copyright © 2018 Chirp. All rights reserved.
 //
 
+import ChirpConnect
+
 protocol ChirpDelegate {
     func onReceived(data: Data?)
     func onSent(data: Data?)
@@ -31,7 +33,7 @@ class ChirpService {
             }
             
             sdk.sentBlock = {
-                (data: Data?) -> () in
+                (data: Data?, channel: UInt?) -> () in
                 if let delegate = self.delegate {
                     delegate.onSent(data: data)
                 }

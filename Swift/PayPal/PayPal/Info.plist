@@ -42,6 +42,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Allow access to your microphone?</string>
+	<string>We need access to your microphone to send/receive payments using sound</string>
 </dict>
 </plist>

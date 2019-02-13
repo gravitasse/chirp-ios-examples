@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChirpConnect
 
 struct StateManager {
     static var accessToken = ""
@@ -38,10 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let clientId = "PAYPAL_APP_CLIENT_ID"
-        let clientSecret = "PAYPAL_APP_CLIENT_SECRET"
-        
-        apiClient.send(PayPalAuthenticate(clientId: clientId, clientSecret: clientSecret)) { response in
+        apiClient.send(PayPalAuthenticate(clientId: PAYPAL_CLIENT_ID, clientSecret: PAYPAL_CLIENT_SECRET)) { response in
             switch response {
             case .success(let data):
                 
