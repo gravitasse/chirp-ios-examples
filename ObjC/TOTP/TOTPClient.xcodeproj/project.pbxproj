@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FDBEE34E31A6F260BCE16FD /* Pods_TOTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949EF5F8BC25F6EE2106406B /* Pods_TOTPClient.framework */; };
+		77718F6D2214646300EC6A02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F6C2214646300EC6A02 /* AppDelegate.m */; };
+		77718F702214646300EC6A02 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F6F2214646300EC6A02 /* ViewController.m */; };
+		77718F732214646300EC6A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77718F712214646300EC6A02 /* Main.storyboard */; };
+		77718F752214646500EC6A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77718F742214646500EC6A02 /* Assets.xcassets */; };
+		77718F782214646500EC6A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77718F762214646500EC6A02 /* LaunchScreen.storyboard */; };
+		77718F7B2214646500EC6A02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F7A2214646500EC6A02 /* main.m */; };
+		77718F832214649C00EC6A02 /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F822214649C00EC6A02 /* MF_Base32Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		77718F87221464D100EC6A02 /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F86221464D100EC6A02 /* OTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		77718F8A221464EC00EC6A02 /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77718F89221464EC00EC6A02 /* TOTPGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16B68153B8C6ADE6E42DD2F5 /* Pods-TOTPClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOTPClient.release.xcconfig"; path = "Target Support Files/Pods-TOTPClient/Pods-TOTPClient.release.xcconfig"; sourceTree = "<group>"; };
+		77718F682214646300EC6A02 /* TOTPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOTPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77718F6B2214646300EC6A02 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77718F6C2214646300EC6A02 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77718F6E2214646300EC6A02 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77718F6F2214646300EC6A02 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77718F722214646300EC6A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77718F742214646500EC6A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77718F772214646500EC6A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77718F792214646500EC6A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77718F7A2214646500EC6A02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77718F822214649C00EC6A02 /* MF_Base32Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MF_Base32Additions.m; sourceTree = "<group>"; };
+		77718F84221464AC00EC6A02 /* MF_Base32Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MF_Base32Additions.h; sourceTree = "<group>"; };
+		77718F85221464C000EC6A02 /* OTPGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTPGenerator.h; sourceTree = "<group>"; };
+		77718F86221464D100EC6A02 /* OTPGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPGenerator.m; sourceTree = "<group>"; };
+		77718F88221464DE00EC6A02 /* TOTPGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOTPGenerator.h; sourceTree = "<group>"; };
+		77718F89221464EC00EC6A02 /* TOTPGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOTPGenerator.m; sourceTree = "<group>"; };
+		77718F8B221470AE00EC6A02 /* Credentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
+		949EF5F8BC25F6EE2106406B /* Pods_TOTPClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TOTPClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53E5007549FEF71F582829F /* Pods-TOTPClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TOTPClient.debug.xcconfig"; path = "Target Support Files/Pods-TOTPClient/Pods-TOTPClient.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77718F652214646300EC6A02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FDBEE34E31A6F260BCE16FD /* Pods_TOTPClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A6595C6B7790C7D9D81C752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				949EF5F8BC25F6EE2106406B /* Pods_TOTPClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AA1583220297F48EB3F0D0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A53E5007549FEF71F582829F /* Pods-TOTPClient.debug.xcconfig */,
+				16B68153B8C6ADE6E42DD2F5 /* Pods-TOTPClient.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77718F5F2214646300EC6A02 = {
+			isa = PBXGroup;
+			children = (
+				77718F6A2214646300EC6A02 /* TOTPClient */,
+				77718F692214646300EC6A02 /* Products */,
+				6AA1583220297F48EB3F0D0D /* Pods */,
+				5A6595C6B7790C7D9D81C752 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77718F692214646300EC6A02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77718F682214646300EC6A02 /* TOTPClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77718F6A2214646300EC6A02 /* TOTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				77718F812214647300EC6A02 /* Classes */,
+				77718F6B2214646300EC6A02 /* AppDelegate.h */,
+				77718F6C2214646300EC6A02 /* AppDelegate.m */,
+				77718F6E2214646300EC6A02 /* ViewController.h */,
+				77718F6F2214646300EC6A02 /* ViewController.m */,
+				77718F712214646300EC6A02 /* Main.storyboard */,
+				77718F742214646500EC6A02 /* Assets.xcassets */,
+				77718F762214646500EC6A02 /* LaunchScreen.storyboard */,
+				77718F792214646500EC6A02 /* Info.plist */,
+				77718F7A2214646500EC6A02 /* main.m */,
+				77718F8B221470AE00EC6A02 /* Credentials.h */,
+			);
+			path = TOTPClient;
+			sourceTree = "<group>";
+		};
+		77718F812214647300EC6A02 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				77718F822214649C00EC6A02 /* MF_Base32Additions.m */,
+				77718F84221464AC00EC6A02 /* MF_Base32Additions.h */,
+				77718F85221464C000EC6A02 /* OTPGenerator.h */,
+				77718F86221464D100EC6A02 /* OTPGenerator.m */,
+				77718F88221464DE00EC6A02 /* TOTPGenerator.h */,
+				77718F89221464EC00EC6A02 /* TOTPGenerator.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77718F672214646300EC6A02 /* TOTPClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77718F7E2214646500EC6A02 /* Build configuration list for PBXNativeTarget "TOTPClient" */;
+			buildPhases = (
+				67B0BCD01982478B0612E264 /* [CP] Check Pods Manifest.lock */,
+				77718F642214646300EC6A02 /* Sources */,
+				77718F652214646300EC6A02 /* Frameworks */,
+				77718F662214646300EC6A02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TOTPClient;
+			productName = TOTPClient;
+			productReference = 77718F682214646300EC6A02 /* TOTPClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77718F602214646300EC6A02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Chirp;
+				TargetAttributes = {
+					77718F672214646300EC6A02 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 77718F632214646300EC6A02 /* Build configuration list for PBXProject "TOTPClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77718F5F2214646300EC6A02;
+			productRefGroup = 77718F692214646300EC6A02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77718F672214646300EC6A02 /* TOTPClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77718F662214646300EC6A02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77718F782214646500EC6A02 /* LaunchScreen.storyboard in Resources */,
+				77718F752214646500EC6A02 /* Assets.xcassets in Resources */,
+				77718F732214646300EC6A02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67B0BCD01982478B0612E264 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TOTPClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77718F642214646300EC6A02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77718F832214649C00EC6A02 /* MF_Base32Additions.m in Sources */,
+				77718F702214646300EC6A02 /* ViewController.m in Sources */,
+				77718F87221464D100EC6A02 /* OTPGenerator.m in Sources */,
+				77718F7B2214646500EC6A02 /* main.m in Sources */,
+				77718F8A221464EC00EC6A02 /* TOTPGenerator.m in Sources */,
+				77718F6D2214646300EC6A02 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77718F712214646300EC6A02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77718F722214646300EC6A02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77718F762214646500EC6A02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77718F772214646500EC6A02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77718F7C2214646500EC6A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		77718F7D2214646500EC6A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77718F7F2214646500EC6A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53E5007549FEF71F582829F /* Pods-TOTPClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = TOTPClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.chirp.TOTPClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77718F802214646500EC6A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B68153B8C6ADE6E42DD2F5 /* Pods-TOTPClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = TOTPClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.chirp.TOTPClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77718F632214646300EC6A02 /* Build configuration list for PBXProject "TOTPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77718F7C2214646500EC6A02 /* Debug */,
+				77718F7D2214646500EC6A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77718F7E2214646500EC6A02 /* Build configuration list for PBXNativeTarget "TOTPClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77718F7F2214646500EC6A02 /* Debug */,
+				77718F802214646500EC6A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77718F602214646300EC6A02 /* Project object */;
+}

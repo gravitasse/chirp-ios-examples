@@ -29,12 +29,15 @@ the `16khz-mono` protocol should be used.
 
 Peer-to-peer payments with anyone nearby using PayPal REST API and Chirp.
 
-See the [blog](https://blog.chirp.io/chirp-paypal)
+See the [blog](https://blog.chirp.io/chirp-paypal) for more details.
+
+![PayPalSend](/Assets/PayPalSend.gif)
+![PayPalReceive](/Assets/PayPalReceive.gif)
 
 For this tutorial you will also need to
 
-- Log in at PayPal developers page, and create an app
-- Copy/Paste the `clientId` and `clientSecret` into AppDelegate.swift
+- Log in at PayPal [developers](https://developer.paypal.com/developer/accounts) page, and create an app
+- Copy/Paste the `clientId` and `clientSecret` into Credentials.swift
 
 ----
 
@@ -44,6 +47,8 @@ For this tutorial you will also need to
 
 Send time based one time only passwords using sound.
 
-See the [blog](https://blog.chirp.io/chirp-totp-generation-and-transmission-6044410526a7)
+See the [blog](https://blog.chirp.io/chirp-totp-generation-and-transmission) for more details.
+
+![TOTP](/Assets/TOTP.png)
 
 ----
